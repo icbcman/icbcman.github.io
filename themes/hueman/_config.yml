@@ -6,7 +6,7 @@ menu:
     About: /about/index.html
 
 # Customize
-subtitle: 工作与生活分开
+subtitle: # 自主添加
 customize:
     logo:
         width: 165
@@ -44,7 +44,7 @@ search:
 
 # Comment
 comment:
-    disqus: hexo-theme-hueman # enter disqus shortname here
+    disqus: zhangxiang # enter disqus shortname here
     duoshuo: # enter duoshuo shortname here
     youyan: # enter youyan uid here
     facebook: # enter true to enable

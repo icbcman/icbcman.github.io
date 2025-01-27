@@ -7,10 +7,17 @@
                         <a href="<%- url_for() %>" class="logo"></a>
                     </h1>
                     <% if (theme.subtitle) { %>
-                        <h2 class="subtitle-wrap">
+
+                        <h1 class="subtitle-wrap">
                             <p class="subtitle"><%= theme.subtitle %></p>
-                        </h2>
+                        </h1>
+                        
                     <% } %>
+
+                    <nav id="sub-nav">
+                        <%- partial('search/index') %>
+                    </nav>
+                    
                 </div>
                 <div id="header-inner" class="nav-container">
                     <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
@@ -41,9 +48,7 @@
                                 </li>
                             <% }} %>
                         </ul>
-                        <nav id="sub-nav">
-                            <%- partial('search/index') %>
-                        </nav>
+
                     </div>
                 </div>
             </div>

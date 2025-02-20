@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    
+
+    
+    <title>Word VBA排版脚本编写指南 | zx-blog</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="程序" />
+    
+    <meta name="description" content="使用deepseek进行Word VBA排版脚本编写指南 2025年2月20日；星期四 ；多云     序号 作者 场景类型    1 我😀 电脑技术   今日感受：               上午：                      早睡早起。                            下午：                      明天腾讯会议。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Word VBA排版脚本编写指南">
+<meta property="og:url" content="https://icbcman.github.io/2025/02/20/Word%20VBA%E6%8E%92%E7%89%88%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99%E6%8C%87%E5%8D%97/index.html">
+<meta property="og:site_name" content="zx-blog">
+<meta property="og:description" content="使用deepseek进行Word VBA排版脚本编写指南 2025年2月20日；星期四 ；多云     序号 作者 场景类型    1 我😀 电脑技术   今日感受：               上午：                      早睡早起。                            下午：                      明天腾讯会议。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://icbcman.github.io/pic/%E4%B8%80%E5%B8%A6%E4%B8%80%E8%B7%AF%E5%B1%95%E7%A4%BA%E5%9B%BE.jpg">
+<meta property="article:published_time" content="2025-02-20T09:08:33.000Z">
+<meta property="article:modified_time" content="2025-02-20T10:24:24.689Z">
+<meta property="article:author" content="zhangxiang">
+<meta property="article:tag" content="程序">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://icbcman.github.io/pic/%E4%B8%80%E5%B8%A6%E4%B8%80%E8%B7%AF%E5%B1%95%E7%A4%BA%E5%9B%BE.jpg">
+    
+
+    
+        <link rel="alternate" href="/" title="zx-blog" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/css/images/favicon.ico" />
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/titillium-web/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/diy-css/dyzj-light.css">
+
+    
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+<script src="/libs/jquery/3.5.0/jquery.min.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+
+                        <h1 class="subtitle-wrap">
+                            <p class="subtitle">记录工作与生活</p>
+                        </h1>
+                        
+                    
+
+                    <nav id="sub-nav">
+                        <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                    </nav>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">主页</a>
+                                </li>
+                            
+                                    <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E6%96%87%E7%AB%A0/">文章</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E6%96%87%E7%AB%A0/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97/">工作日志</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E6%96%87%E7%AB%A0/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%94%B5%E8%84%91/">电脑</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%94%B5%E8%84%91/%E6%8A%80%E6%9C%AF/">技术</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E9%A2%86%E5%AF%BC%E6%96%87%E7%AC%94/">领导文笔</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E9%A2%86%E5%AF%BC%E6%96%87%E7%AC%94/%E6%94%BF%E5%BA%9C/">政府</a></li></ul></li></ul>
+                                
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">关于</a>
+                                </li>
+                            
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/%E7%94%B5%E8%84%91/">电脑</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/%E7%94%B5%E8%84%91/%E6%8A%80%E6%9C%AF/">技术</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-Word VBA排版脚本编写指南" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                <span alt="rainbow">
+    
+        <h1 class="article-title" itemprop="name">
+        Word VBA排版脚本编写指南
+        </h1>
+    
+</span>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2025/02/20/Word%20VBA%E6%8E%92%E7%89%88%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99%E6%8C%87%E5%8D%97/" class="article-date">
+       <time datetime="2025-02-20T09:08:33.000Z" itemprop="datePublished">2025-02-20</time>
+    </a>
+  </div>
+
+
+<div class="article-date">
+  <i class="fa fa-calendar-plus-o"></i>
+  <a href="/2025/02/20/Word%20VBA%E6%8E%92%E7%89%88%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99%E6%8C%87%E5%8D%97/" class="article-date">
+     <time datetime="2025-02-20T10:24:24.689Z" itemprop="dateModified">2025-02-20</time>
+  </a>
+</div>
+
+
+                
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/%E7%A8%8B%E5%BA%8F/" rel="tag">程序</a>
+    </div>
+
+                
+
+                
+   <div class="article-counter">
+      <i class="fa fa-file-word-o"></i>
+      <span class="post-count-item-text">本文字数: </span>
+      <span class="post-count">1.2k</span>
+      <i class="fa fa-clock-o"></i>
+      <span class="post-time-item-text">阅读时长: </span>
+      <span class="post-count">5 分钟 </span>
+   </div>
+
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+
+            
+
+            
+
+            <h1 id="使用deepseek进行Word-VBA排版脚本编写指南"><a href="#使用deepseek进行Word-VBA排版脚本编写指南" class="headerlink" title="使用deepseek进行Word VBA排版脚本编写指南"></a>使用deepseek进行Word VBA排版脚本编写指南</h1><ul>
+<li><font style="background-color:#8bc34a">2025年2月20日</font>；<font title="yellow">星期四</font> ；<font title="blue">多云</font></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">序号</th>
+<th align="center">作者</th>
+<th align="center">场景类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center"><strong>我</strong>😀</td>
+<td align="center">电脑技术</td>
+</tr>
+</tbody></table>
+<p><span alt="shake">今日感受：</span></p>
+<div alt="timeline">
+    <div alt="timenode">
+        <div alt="meta"><span alt="btn">上午</span><a href="#">：</a></div>
+        <div alt="body">
+            早睡早起。
+        </div>
+    </div>
+    <div alt="timenode">
+        <div alt="meta"><span alt="btn">下午</span><a href="#">：</a></div>
+        <div alt="body">
+            明天腾讯会议。
+        </div>
+    </div>
+</div>
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<p><strong>需求：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">请写一个vba脚本，用于word排版。要求如下： </span><br><span class="line">一、正文： </span><br><span class="line">（一）正文题目：黑体，二号字，段前17磅，段后17磅，固定行距28磅； </span><br><span class="line">（二）正文内容：中文仿宋，英文及数字Times New Roman，四号字，固定行距28磅； </span><br><span class="line">（三）正文一级标题：仿宋，四号字，加粗，固定行距28磅。</span><br><span class="line">二、脚注：  </span><br><span class="line">中文宋体，英文及数字Times New Roman，小五字，固定行距28磅。 </span><br><span class="line">三、图表： </span><br><span class="line">（一）表标题：黑体，小四字，段前0.5行，置于表上方居中； </span><br><span class="line">（二）图标题：黑体，小四字，段前0.5行，置于图上方居中； </span><br><span class="line">（三）图表内容：中文仿宋，英文及数字Times New Roman，小四字，第一行及第一列加粗，单倍行距。 </span><br><span class="line">（四）图表备注：宋体，小五字，置于图表下方与图表左边界左对齐； </span><br><span class="line">（五）图表序号：每篇文章单独排序。 </span><br><span class="line">四、其他： </span><br><span class="line">文中所有数字及英文：字体Times New Roman。</span><br></pre></td></tr></table></figure>
+
+<p><strong>深度思考：</strong></p>
+<table>
+<thead>
+<tr>
+<th>嗯，用户让我写一个VBA脚本用于Word排版，要求还挺详细的。我需要仔细看看每个部分的要求，确保脚本能满足所有条件。首先，用户分成了四个大部分：正文、脚注、图表和其他。每个部分里还有更细的条目，比如正文的题目、内容、一级标题，图表的标题、内容、备注等等……</th>
+</tr>
+</thead>
+</table>
+<p>以下是根据您的要求编写的Word VBA排版脚本，请按以下步骤使用：</p>
+<p><strong>vba：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br></pre></td><td class="code"><pre><span class="line">Sub DocumentFormatting()</span><br><span class="line">    Dim oDoc As Document</span><br><span class="line">    Set oDoc = ActiveDocument</span><br><span class="line">    </span><br><span class="line">    &#x27; 设置全局参数</span><br><span class="line">    With oDoc</span><br><span class="line">        &#x27; ========== 正文设置 ==========</span><br><span class="line">        &#x27; 正文题目样式（标题1）</span><br><span class="line">        With .Styles(wdStyleHeading1).Font</span><br><span class="line">            .Name = &quot;黑体&quot;</span><br><span class="line">            .NameAscii = &quot;Times New Roman&quot;</span><br><span class="line">            .Size = 22</span><br><span class="line">        End With</span><br><span class="line">        With .Styles(wdStyleHeading1).ParagraphFormat</span><br><span class="line">            .SpaceBefore = 17</span><br><span class="line">            .SpaceAfter = 17</span><br><span class="line">            .LineSpacingRule = wdLineSpaceExactly</span><br><span class="line">            .LineSpacing = 28</span><br><span class="line">            .Alignment = wdAlignParagraphCenter</span><br><span class="line">        End With</span><br><span class="line"></span><br><span class="line">        &#x27; 正文内容样式（正文）</span><br><span class="line">        With .Styles(wdStyleNormal).Font</span><br><span class="line">            .Name = &quot;仿宋&quot;</span><br><span class="line">            .NameAscii = &quot;Times New Roman&quot;</span><br><span class="line">            .Size = 16</span><br><span class="line">        End With</span><br><span class="line">        With .Styles(wdStyleNormal).ParagraphFormat</span><br><span class="line">            .LineSpacingRule = wdLineSpaceExactly</span><br><span class="line">            .LineSpacing = 28</span><br><span class="line">        End With</span><br><span class="line"></span><br><span class="line">        &#x27; 一级标题样式（标题2）</span><br><span class="line">        With .Styles(wdStyleHeading2).Font</span><br><span class="line">            .Name = &quot;仿宋&quot;</span><br><span class="line">            .NameAscii = &quot;Times New Roman&quot;</span><br><span class="line">            .Size = 16</span><br><span class="line">            .Bold = True</span><br><span class="line">        End With</span><br><span class="line">        With .Styles(wdStyleHeading2).ParagraphFormat</span><br><span class="line">            .LineSpacingRule = wdLineSpaceExactly</span><br><span class="line">            .LineSpacing = 28</span><br><span class="line">        End With</span><br><span class="line"></span><br><span class="line">        &#x27; ========== 脚注设置 ==========</span><br><span class="line">        With .Styles(wdStyleFootnoteText).Font</span><br><span class="line">            .Name = &quot;宋体&quot;</span><br><span class="line">            .NameAscii = &quot;Times New Roman&quot;</span><br><span class="line">            .Size = 9</span><br><span class="line">        End With</span><br><span class="line">        .Styles(wdStyleFootnoteText).ParagraphFormat.LineSpacing = 28</span><br><span class="line"></span><br><span class="line">        &#x27; ========== 图表设置 ==========</span><br><span class="line">        &#x27; 创建表标题样式</span><br><span class="line">        If Not StyleExists(&quot;表标题&quot;) Then</span><br><span class="line">            .Styles.Add Name:=&quot;表标题&quot;, Type:=wdStyleTypeParagraph</span><br><span class="line">            With .Styles(&quot;表标题&quot;).Font</span><br><span class="line">                .Name = &quot;黑体&quot;</span><br><span class="line">                .Size = 12</span><br><span class="line">            End With</span><br><span class="line">            With .Styles(&quot;表标题&quot;).ParagraphFormat</span><br><span class="line">                .SpaceBefore = 6</span><br><span class="line">                .Alignment = wdAlignParagraphCenter</span><br><span class="line">            End With</span><br><span class="line">        End If</span><br><span class="line"></span><br><span class="line">        &#x27; 创建图标题样式（同上）</span><br><span class="line">        If Not StyleExists(&quot;图标题&quot;) Then</span><br><span class="line">            .Styles.Add Name:=&quot;图标题&quot;, Type:=wdStyleTypeParagraph</span><br><span class="line">            .Styles(&quot;图标题&quot;).Duplicate .Styles(&quot;表标题&quot;)</span><br><span class="line">        End If</span><br><span class="line"></span><br><span class="line">        &#x27; 处理所有表格</span><br><span class="line">        Dim oTbl As Table</span><br><span class="line">        For Each oTbl In .Tables</span><br><span class="line">            &#x27; 表格标题</span><br><span class="line">            If oTbl.Range.Previous(wdParagraph).Style &lt;&gt; &quot;表标题&quot; Then</span><br><span class="line">                oTbl.Range.InsertBefore vbCr</span><br><span class="line">                oTbl.Range.Previous(wdParagraph).Style = &quot;表标题&quot;</span><br><span class="line">            End If</span><br><span class="line">            </span><br><span class="line">            &#x27; 表格内容格式</span><br><span class="line">            With oTbl.Range</span><br><span class="line">                .Font.Name = &quot;仿宋&quot;</span><br><span class="line">                .Font.NameAscii = &quot;Times New Roman&quot;</span><br><span class="line">                .Font.Size = 12</span><br><span class="line">                &#x27; 第一行加粗</span><br><span class="line">                oTbl.Rows(1).Range.Font.Bold = True</span><br><span class="line">                &#x27; 第一列加粗</span><br><span class="line">                For Each oCell In oTbl.Columns(1).Cells</span><br><span class="line">                    oCell.Range.Font.Bold = True</span><br><span class="line">                Next</span><br><span class="line">            End With</span><br><span class="line">            oTbl.Range.ParagraphFormat.LineSpacingRule = wdLineSpaceSingle</span><br><span class="line">        Next</span><br><span class="line"></span><br><span class="line">        &#x27; ========== 数字/英文全局设置 ==========</span><br><span class="line">        With .Styles(wdStyleNormal).Font</span><br><span class="line">            .NameAscii = &quot;Times New Roman&quot;</span><br><span class="line">            .NameOther = &quot;Times New Roman&quot;</span><br><span class="line">        End With</span><br><span class="line">    End With</span><br><span class="line"></span><br><span class="line">    MsgBox &quot;排版已完成！&quot;, vbInformation</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line">Function StyleExists(sStyleName As String) As Boolean</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    StyleExists = (Trim(ActiveDocument.Styles(sStyleName).NameLocal) = sStyleName)</span><br><span class="line">End Function</span><br></pre></td></tr></table></figure>
+
+<p>使用说明：</p>
+<ol>
+<li>打开需要排版的Word文档</li>
+<li>按Alt+F11打开VBA编辑器</li>
+<li>在左侧工程资源管理器中右键插入新模块</li>
+<li>粘贴此代码</li>
+<li>按F5运行宏DocumentFormatting</li>
+</ol>
+<p>注意事项：</p>
+<ol>
+<li>请确保文档中的图表已正确插入（表格使用标准表格对象，图片建议使用插入形状或图片）</li>
+<li>表格标题需要紧邻表格上方段落</li>
+<li>图表序号需要手动维护（VBA无法自动生成连续序号）</li>
+<li>建议先备份文档再执行宏</li>
+<li>需要Windows系统装有对应字体</li>
+<li>行距设置基于Word磅值计算（1磅&#x3D;1&#x2F;72英寸）</li>
+</ol>
+<p>此脚本将自动处理：</p>
+<ul>
+<li>各级标题样式</li>
+<li>正文和脚注格式</li>
+<li>表格基本格式</li>
+<li>中英文字体自动匹配</li>
+<li>全局数字&#x2F;英文字体设置</li>
+</ul>
+<p>特殊说明：</p>
+<ol>
+<li>图表备注需要手动应用”图表备注”样式（代码中未完全实现）</li>
+<li>图片标题处理需要额外代码（建议使用题注功能）</li>
+<li>复杂表格可能需要手动调整</li>
+<li>英文引号建议使用直引号（‘’“”）而非弯引号</li>
+</ol>
+<p>您可以根据实际需要进一步调整样式参数或添加更多格式化功能。</p>
+<p><img src="/../pic/%E4%B8%80%E5%B8%A6%E4%B8%80%E8%B7%AF%E5%B1%95%E7%A4%BA%E5%9B%BE.jpg"></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://icbcman.github.io/2025/02/20/Word%20VBA%E6%8E%92%E7%89%88%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99%E6%8C%87%E5%8D%97/" data-id="cm7d4jma90000cocyhil04dfq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "zhangxiang"
+        },
+        "headline": "Word VBA排版脚本编写指南",
+        "image": "https://icbcman.github.io/../pic/%E4%B8%80%E5%B8%A6%E4%B8%80%E8%B7%AF%E5%B1%95%E7%A4%BA%E5%9B%BE.jpg",
+        "keywords": "程序",
+        "genre": "电脑 技术",
+        "datePublished": "2025-02-20",
+        "dateCreated": "2025-02-20",
+        "dateModified": "2025-02-20",
+        "url": "https://icbcman.github.io/2025/02/20/Word VBA排版脚本编写指南/",
+        "description": "使用deepseek进行Word VBA排版脚本编写指南
+2025年2月20日；星期四 ；多云
+
+
+
+
+序号
+作者
+场景类型
+
+
+
+1
+我😀
+电脑技术
+
+
+今日感受：
+
+    
+        上午：
+        
+            早睡早起。
+        
+    
+    
+        下午：
+        
+            明天腾讯会议。
+        
+ ",
+        "wordCount": 1605
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>关注我 :</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/icbcman" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2025/02/12/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F2025-2-12/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">这世上有成千上万种爱</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2025/02/20/Word%20VBA%E6%8E%92%E7%89%88%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99%E6%8C%87%E5%8D%97/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/../pic/%E4%B8%80%E5%B8%A6%E4%B8%80%E8%B7%AF%E5%B1%95%E7%A4%BA%E5%9B%BE.jpg)" alt="Word VBA排版脚本编写指南" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/%E7%94%B5%E8%84%91/">电脑</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%94%B5%E8%84%91/%E6%8A%80%E6%9C%AF/">技术</a></p>
+                            <p class="item-title"><a href="/2025/02/20/Word%20VBA%E6%8E%92%E7%89%88%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99%E6%8C%87%E5%8D%97/" class="title">Word VBA排版脚本编写指南</a></p>
+                            <p class="item-date"><time datetime="2025-02-20T09:08:33.000Z" itemprop="datePublished">2025-02-20</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2025/02/12/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F2025-2-12/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/../pic/yezi.jpg)" alt="这世上有成千上万种爱" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/%E6%96%87%E7%AB%A0/">文章</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E6%96%87%E7%AB%A0/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a></p>
+                            <p class="item-title"><a href="/2025/02/12/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F2025-2-12/" class="title">这世上有成千上万种爱</a></p>
+                            <p class="item-date"><time datetime="2025-02-12T09:08:33.000Z" itemprop="datePublished">2025-02-12</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2025/01/25/%E9%A2%86%E5%AF%BC%E5%8F%91%E8%A8%802025-1-25/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/../pic/222.gif)" alt="离任发言（韩立明）" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/%E9%A2%86%E5%AF%BC%E6%96%87%E7%AC%94/">领导文笔</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E9%A2%86%E5%AF%BC%E6%96%87%E7%AC%94/%E6%94%BF%E5%BA%9C/">政府</a></p>
+                            <p class="item-title"><a href="/2025/01/25/%E9%A2%86%E5%AF%BC%E5%8F%91%E8%A8%802025-1-25/" class="title">离任发言（韩立明）</a></p>
+                            <p class="item-date"><time datetime="2025-01-25T11:08:33.000Z" itemprop="datePublished">2025-01-25</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2025/01/23/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%972025-1-23/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/../pic/article-flower.jpeg)" alt="工作日志2025.1.23" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/%E6%96%87%E7%AB%A0/">文章</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E6%96%87%E7%AB%A0/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97/">工作日志</a></p>
+                            <p class="item-title"><a href="/2025/01/23/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%972025-1-23/" class="title">工作日志2025.1.23</a></p>
+                            <p class="item-date"><time datetime="2025-01-23T08:08:33.000Z" itemprop="datePublished">2025-01-23</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2025/01/22/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%972025-1-22/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/../pic/R.jpg)" alt="工作日志2025.1.22" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/%E6%96%87%E7%AB%A0/">文章</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E6%96%87%E7%AB%A0/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97/">工作日志</a></p>
+                            <p class="item-title"><a href="/2025/01/22/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%972025-1-22/" class="title">工作日志2025.1.22</a></p>
+                            <p class="item-date"><time datetime="2025-01-22T05:08:33.000Z" itemprop="datePublished">2025-01-22</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%87%E7%AB%A0/">文章</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%87%E7%AB%A0/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97/">工作日志</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%87%E7%AB%A0/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%B5%E8%84%91/">电脑</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%B5%E8%84%91/%E6%8A%80%E6%9C%AF/">技术</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%A2%86%E5%AF%BC%E6%96%87%E7%AC%94/">领导文笔</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%A2%86%E5%AF%BC%E6%96%87%E7%AC%94/%E6%94%BF%E5%BA%9C/">政府</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/02/">二月 2025</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">一月 2025</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">四月 2024</a><span class="archive-list-count">6</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">标签</h3>
+        <div class="widget">
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A5%BD%E6%97%A5%E5%AD%90/" rel="tag">好日子</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%84%9F%E6%83%B3/" rel="tag">感想</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%BF%97/" rel="tag">日志</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A8%8B%E5%BA%8F/" rel="tag">程序</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/%E5%A5%BD%E6%97%A5%E5%AD%90/" style="font-size: 10px;">好日子</a> <a href="/tags/%E6%84%9F%E6%83%B3/" style="font-size: 10px;">感想</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 20px;">日志</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a> <a href="/tags/%E7%A8%8B%E5%BA%8F/" style="font-size: 10px;">程序</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://www.zhangxiang.xyz">网址</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2025 zhangxiang</p>
+                
+                <p>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="https://github.com/icbcman" target="_blank">Author</a></p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    
+    
+    <script>
+    var disqus_shortname = 'zhangxiang';
+    
+    
+    var disqus_url = 'https://icbcman.github.io/2025/02/20/Word%20VBA%E6%8E%92%E7%89%88%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99%E6%8C%87%E5%8D%97/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+
+    
+    
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+</body>
+</html>

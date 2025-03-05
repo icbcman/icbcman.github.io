@@ -21,7 +21,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://icbcman.github.io/pic/grass.jpg">
 <meta property="article:published_time" content="2025-03-05T11:08:33.000Z">
-<meta property="article:modified_time" content="2025-03-05T11:00:54.953Z">
+<meta property="article:modified_time" content="2025-03-05T11:07:38.842Z">
 <meta property="article:author" content="zhangxiang">
 <meta property="article:tag" content="程序">
 <meta name="twitter:card" content="summary">
@@ -198,7 +198,7 @@
 <div class="article-date">
   <i class="fa fa-calendar-plus-o"></i>
   <a href="/2025/03/05/vba%E6%8E%92%E7%89%88%E5%8F%82%E6%95%B0%E6%A1%88%E4%BE%8B20250305/" class="article-date">
-     <time datetime="2025-03-05T11:00:54.953Z" itemprop="dateModified">2025-03-05</time>
+     <time datetime="2025-03-05T11:07:38.842Z" itemprop="dateModified">2025-03-05</time>
   </a>
 </div>
 
@@ -217,10 +217,10 @@
    <div class="article-counter">
       <i class="fa fa-file-word-o"></i>
       <span class="post-count-item-text">本文字数: </span>
-      <span class="post-count">1.2k</span>
+      <span class="post-count">1.4k</span>
       <i class="fa fa-clock-o"></i>
       <span class="post-time-item-text">阅读时长: </span>
-      <span class="post-count">5 分钟 </span>
+      <span class="post-count">6 分钟 </span>
    </div>
 
 
@@ -276,10 +276,18 @@
 <p>其他更多详细的属性可自行查阅开发文档。</p>
 <p>二、修改目录内容样式</p>
 <p>​    对于目录中不同级别的标题的样式会存在差异，我查找并修改样式的过程是，先找到所有标题的名称，不同级别放入不同数组中，在每个数组遍历寻找第一次出现的段落修改其样式。注意注意：目录中的文本属于超链接文本！实现代码如下（以修改目录中1级标题为例）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Sub</span> <span class="title class_">FormatHeading2</span>()   <span class="string">&#x27;修改1级标题</span></span><br><span class="line"><span class="string">    Dim p As Paragraph</span></span><br><span class="line"><span class="string">    For Each p In ActiveDocument.Paragraphs</span></span><br><span class="line"><span class="string">        If p.Style = ActiveDocument.styles(&quot;标题 1&quot;) Then</span></span><br><span class="line"><span class="string">            p.Range.Font.Bold = True</span></span><br><span class="line"><span class="string">            p.Range.Font.Italic = True &#x27;</span>设置倾斜</span><br><span class="line">            p.<span class="property">Range</span>.<span class="property">Font</span>.<span class="property">Underline</span> = wdUnderlineSingle <span class="string">&#x27;设置下划线（单下划线）            </span></span><br><span class="line"><span class="string">            p.Range.Font.Size = 15</span></span><br><span class="line"><span class="string">            p.Range.Font.name = &quot;宋体&quot;</span></span><br><span class="line"><span class="string">            p.Range.ParagraphFormat.Alignment = wdAlignParagraphRight</span></span><br><span class="line"><span class="string">            p.Range.ParagraphFormat.spaceBefore = 20</span></span><br><span class="line"><span class="string">            p.Range.ParagraphFormat.spaceAfter = 10</span></span><br><span class="line"><span class="string">            p.Range.ParagraphFormat.LineSpacingRule = wdLineSpaceSingle   &#x27;</span>单倍行距</span><br><span class="line">            p.<span class="property">Range</span>.<span class="property">ParagraphFormat</span>.<span class="property">CharacterUnitFirstLineIndent</span> = <span class="number">0</span></span><br><span class="line">            p.<span class="property">Range</span>.<span class="property">ParagraphFormat</span>.<span class="property">FirstLineIndent</span> = <span class="title class_">CentimetersToPoints</span>(<span class="number">0</span>)</span><br><span class="line">        <span class="title class_">End</span> <span class="title class_">If</span></span><br><span class="line">    <span class="title class_">Next</span> p</span><br><span class="line"><span class="title class_">End</span> <span class="title class_">Sub</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Sub</span> <span class="title function_">updateDirectoryContentOneStyle</span>()        <span class="string">&#x27;注意超链接文本问题</span></span><br><span class="line"><span class="string">    Dim p As Paragraph</span></span><br><span class="line"><span class="string">    Dim one() As String</span></span><br><span class="line"><span class="string">    Dim oneCount As Integer</span></span><br><span class="line"><span class="string">    Dim i As Integer</span></span><br><span class="line"><span class="string">  For Each p In ActiveDocument.Paragraphs</span></span><br><span class="line"><span class="string">    If p.Style = ActiveDocument.styles(&quot;标题 1&quot;) Then</span></span><br><span class="line"><span class="string">        ReDim Preserve one(oneCount) &#x27;</span>扩展一级标题数组</span><br><span class="line">        <span class="title function_">one</span>(oneCount) = p.<span class="property">Range</span>.<span class="property">text</span></span><br><span class="line">        oneCount = oneCount + <span class="number">1</span></span><br><span class="line">    <span class="title class_">End</span> <span class="title class_">If</span></span><br><span class="line">  <span class="title class_">Next</span> p</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;输出数组中保存的标题内容</span></span><br><span class="line"><span class="string">  For i = 0 To UBound(one)</span></span><br><span class="line"><span class="string">    Dim myRange As Range</span></span><br><span class="line"><span class="string">    Dim myStyle As Style</span></span><br><span class="line"><span class="string">    Set myRange = ActiveDocument.Content</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    myRange.Find.Execute FindText:=one(i), Forward:=True  &#x27;</span>查找</span><br><span class="line">    </span><br><span class="line">    <span class="title class_">If</span> myRange.<span class="property">Find</span>.<span class="property">Found</span> = <span class="title class_">True</span> <span class="title class_">Then</span></span><br><span class="line">        <span class="title class_">With</span> myRange</span><br><span class="line">            .<span class="property">Font</span>.<span class="property">Bold</span> = <span class="title class_">False</span></span><br><span class="line">            .<span class="property">Font</span>.<span class="property">name</span> = <span class="string">&quot;宋体&quot;</span></span><br><span class="line">            .<span class="property">Font</span>.<span class="property">Size</span> = <span class="number">14</span></span><br><span class="line">        <span class="title class_">End</span> <span class="title class_">With</span></span><br><span class="line">    <span class="title class_">End</span> <span class="title class_">If</span></span><br><span class="line">  <span class="title class_">Next</span></span><br><span class="line"><span class="title class_">End</span> <span class="title class_">Sub</span></span><br></pre></td></tr></table></figure>
 
 
 
+<p>​    </p>
 <p>三、查找特定文本并修改其样式</p>
 <p> 本文以查找“关键词”三字为例。使用Find关键字进行查找，找到后修改其样式即可。更多的详细属性请参考开发文档，实现代码如下：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Sub</span> <span class="title function_">findText</span>()</span><br><span class="line">    <span class="title class_">Set</span> myRange = <span class="title class_">ActiveDocument</span>.<span class="property">Content</span></span><br><span class="line">    myRange.<span class="property">Find</span>.<span class="property">Execute</span> <span class="title class_">FindText</span>:=<span class="string">&quot;关键词&quot;</span>, <span class="title class_">Forward</span>:=<span class="title class_">True</span></span><br><span class="line">    <span class="title class_">If</span> myRange.<span class="property">Find</span>.<span class="property">Found</span> = <span class="title class_">True</span> <span class="title class_">Then</span></span><br><span class="line">        <span class="title class_">With</span> myRange</span><br><span class="line">            .<span class="property">Font</span>.<span class="property">Bold</span> = <span class="title class_">False</span></span><br><span class="line">            .<span class="property">ParagraphFormat</span>.<span class="property">Alignment</span> = wdAlignParagraphLeft <span class="string">&#x27;左对齐</span></span><br><span class="line"><span class="string">            .Font.Color = wdColorBlack</span></span><br><span class="line"><span class="string">            .Font.name = &quot;黑体&quot;</span></span><br><span class="line"><span class="string">            .Font.Size = 14</span></span><br><span class="line"><span class="string">            .ParagraphFormat.PageBreakBefore = False</span></span><br><span class="line"><span class="string">            .ParagraphFormat.CharacterUnitFirstLineIndent = 0   &#x27;</span>去除首行缩进</span><br><span class="line">            .<span class="property">ParagraphFormat</span>.<span class="property">FirstLineIndent</span> = <span class="title class_">CentimetersToPoints</span>(<span class="number">0</span>)</span><br><span class="line">        <span class="title class_">End</span> <span class="title class_">With</span></span><br><span class="line">    <span class="title class_">End</span> <span class="title class_">If</span></span><br><span class="line"><span class="title class_">End</span> <span class="title class_">Sub</span></span><br></pre></td></tr></table></figure>
@@ -290,6 +298,7 @@
 
 
 
+<p>​    </p>
 <p>————————————————</p>
 <p><img src="/../pic/grass.jpg"></p>
 
@@ -410,7 +419,7 @@
     
 
 ----------",
-        "wordCount": 2321
+        "wordCount": 2627
     }
 </script>
 

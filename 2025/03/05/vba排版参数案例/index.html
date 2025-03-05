@@ -6,17 +6,21 @@
     
 
     
-    <title>归档: 2024 | zx-blog</title>
+    <title>zx-blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="随心随笔">
-<meta property="og:type" content="website">
+    <meta name="keywords" content="" />
+    
+    <meta name="description" content="一、修改标题样式（1、2、3…级标题）     以1级标题为例，首先找到类型为“标题 1”的样式段落，再修改其具体样式，如加粗、下划线、倾斜、行距、段前段后等。实现代码如下：  123456789101112131415161718Sub FormatHeading2()   &#x27;修改1级标题    Dim p As Paragraph    For Each p In ActiveDoc">
+<meta property="og:type" content="article">
 <meta property="og:title" content="zx-blog">
-<meta property="og:url" content="https://icbcman.github.io/archives/2024/index.html">
+<meta property="og:url" content="https://icbcman.github.io/2025/03/05/vba%E6%8E%92%E7%89%88%E5%8F%82%E6%95%B0%E6%A1%88%E4%BE%8B/index.html">
 <meta property="og:site_name" content="zx-blog">
-<meta property="og:description" content="随心随笔">
+<meta property="og:description" content="一、修改标题样式（1、2、3…级标题）     以1级标题为例，首先找到类型为“标题 1”的样式段落，再修改其具体样式，如加粗、下划线、倾斜、行距、段前段后等。实现代码如下：  123456789101112131415161718Sub FormatHeading2()   &#x27;修改1级标题    Dim p As Paragraph    For Each p In ActiveDoc">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-03-05T10:48:34.783Z">
+<meta property="article:modified_time" content="2025-03-05T10:48:34.899Z">
 <meta property="article:author" content="zhangxiang">
 <meta property="article:tag" content="张翔的博客">
 <meta name="twitter:card" content="summary">
@@ -160,486 +164,305 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-archive"></i>归档: 2024
+    未分类
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            
+                            <article id="post-vba排版参数案例" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <div class="article-meta">
+                
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2025/03/05/vba%E6%8E%92%E7%89%88%E5%8F%82%E6%95%B0%E6%A1%88%E4%BE%8B/" class="article-date">
+       <time datetime="2025-03-05T10:48:34.783Z" itemprop="datePublished">2025-03-05</time>
+    </a>
+  </div>
 
-    
-    
-        
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2024" class="archive-year"><i class="icon fa fa-calendar-o"></i>2024</a>
+
+<div class="article-date">
+  <i class="fa fa-calendar-plus-o"></i>
+  <a href="/2025/03/05/vba%E6%8E%92%E7%89%88%E5%8F%82%E6%95%B0%E6%A1%88%E4%BE%8B/" class="article-date">
+     <time datetime="2025-03-05T10:48:34.899Z" itemprop="dateModified">2025-03-05</time>
+  </a>
+</div>
+
+
+                
+
+                
+                
+
+                
+   <div class="article-counter">
+      <i class="fa fa-file-word-o"></i>
+      <span class="post-count-item-text">本文字数: </span>
+      <span class="post-count">1.2k</span>
+      <i class="fa fa-clock-o"></i>
+      <span class="post-time-item-text">阅读时长: </span>
+      <span class="post-count">5 分钟 </span>
+   </div>
+
+
             </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
         
-        <a href="/2024/04/10/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%972024-4-10/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/../pic/012f5f579c1d040000012e7e8b6ed7.jpg@1280w_1l_2o_100sh.jpg)" alt="工作日志2024.4.10" class="thumbnail-image"></span>
-    
-    
         
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://icbcman.github.io/2024/04/10/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%972024-4-10/">0</span>
-    
-</span>
+        <div class="article-entry" itemprop="articleBody">
+            
+
+            
+
+            
+
+            <p>一、修改标题样式（1、2、3…级标题）</p>
+<pre><code>    以1级标题为例，首先找到类型为“标题 1”的样式段落，再修改其具体样式，如加粗、下划线、倾斜、行距、段前段后等。实现代码如下：
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Sub FormatHeading2()   &#x27;修改1级标题</span><br><span class="line">    Dim p As Paragraph</span><br><span class="line">    For Each p In ActiveDocument.Paragraphs</span><br><span class="line">        If p.Style = ActiveDocument.styles(&quot;标题 1&quot;) Then</span><br><span class="line">            p.Range.Font.Bold = True</span><br><span class="line">            p.Range.Font.Italic = True &#x27;设置倾斜</span><br><span class="line">            p.Range.Font.Underline = wdUnderlineSingle &#x27;设置下划线（单下划线）            </span><br><span class="line">            p.Range.Font.Size = 15</span><br><span class="line">            p.Range.Font.name = &quot;宋体&quot;</span><br><span class="line">            p.Range.ParagraphFormat.Alignment = wdAlignParagraphRight</span><br><span class="line">            p.Range.ParagraphFormat.spaceBefore = 20</span><br><span class="line">            p.Range.ParagraphFormat.spaceAfter = 10</span><br><span class="line">            p.Range.ParagraphFormat.LineSpacingRule = wdLineSpaceSingle   &#x27;单倍行距</span><br><span class="line">            p.Range.ParagraphFormat.CharacterUnitFirstLineIndent = 0</span><br><span class="line">            p.Range.ParagraphFormat.FirstLineIndent = CentimetersToPoints(0)</span><br><span class="line">        End If</span><br><span class="line">    Next p</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
 
 
-    
-</a>
+<p>其他更多详细的属性可自行查阅开发文档。</p>
+<p>二、修改目录内容样式</p>
+<pre><code>    对于目录中不同级别的标题的样式会存在差异，我查找并修改样式的过程是，先找到所有标题的名称，不同级别放入不同数组中，在每个数组遍历寻找第一次出现的段落修改其样式。注意注意：目录中的文本属于超链接文本！实现代码如下（以修改目录中1级标题为例）：
 
+Sub updateDirectoryContentOneStyle()        &#39;注意超链接文本问题
+    Dim p As Paragraph
+    Dim one() As String
+    Dim oneCount As Integer
+    Dim i As Integer
+  For Each p In ActiveDocument.Paragraphs
+    If p.Style = ActiveDocument.styles(&quot;标题 1&quot;) Then
+        ReDim Preserve one(oneCount) &#39;扩展一级标题数组
+        one(oneCount) = p.Range.text
+        oneCount = oneCount + 1
+    End If
+  Next p
+
+&#39;输出数组中保存的标题内容
+  For i = 0 To UBound(one)
+    Dim myRange As Range
+    Dim myStyle As Style
+    Set myRange = ActiveDocument.Content
+    
+    myRange.Find.Execute FindText:=one(i), Forward:=True  &#39;查找
+    
+    If myRange.Find.Found = True Then
+        With myRange
+            .Font.Bold = False
+            .Font.name = &quot;宋体&quot;
+            .Font.Size = 14
+        End With
+    End If
+  Next
+End Sub
+</code></pre>
+<p>三、查找特定文本并修改其样式</p>
+<pre><code>    本文以查找“关键词”三字为例。使用Find关键字进行查找，找到后修改其样式即可。更多的详细属性请参考开发文档，实现代码如下：
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Sub findText()</span><br><span class="line">    Set myRange = ActiveDocument.Content</span><br><span class="line">    myRange.Find.Execute FindText:=&quot;关键词&quot;, Forward:=True</span><br><span class="line">    If myRange.Find.Found = True Then</span><br><span class="line">        With myRange</span><br><span class="line">            .Font.Bold = False</span><br><span class="line">            .ParagraphFormat.Alignment = wdAlignParagraphLeft &#x27;左对齐</span><br><span class="line">            .Font.Color = wdColorBlack</span><br><span class="line">            .Font.name = &quot;黑体&quot;</span><br><span class="line">            .Font.Size = 14</span><br><span class="line">            .ParagraphFormat.PageBreakBefore = False</span><br><span class="line">            .ParagraphFormat.CharacterUnitFirstLineIndent = 0   &#x27;去除首行缩进</span><br><span class="line">            .ParagraphFormat.FirstLineIndent = CentimetersToPoints(0)</span><br><span class="line">        End With</span><br><span class="line">    End If</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
+
+<p>四、表格样式</p>
+<pre><code>    修改表格样式，可以查阅开发文档与网络资源。我也参考了AI的一些代码。实现代码如下（最基本的不加样式的表格）：
+
+Sub execlOperate()   &#39;表格样式操作
+    Application.ScreenUpdating = False  &#39;关闭屏幕刷新
+    Application.DisplayAlerts = False
+    On Error Resume Next  &#39;忽略错误
+    Dim mytable As Table, i As Long
+    If Selection.Information(wdWithInTable) = True Then i = 1
+    For Each mytable In ActiveDocument.Tables
+        If i = 1 Then Set mytable = Selection.Tables(1)
+        With mytable
+            &#39;取消底色
+            .Shading.ForegroundPatternColor = wdColorAutomatic
+            .Shading.BackgroundPatternColor = wdColorAutomatic
+            Options.DefaultHighlightColorIndex = wdNoHighlight
+            .Range.HighlightColorIndex = wdNoHighlight
+            .Style = &quot;表格主题&quot;
+       &#39;单元格边距
+        .TopPadding = PixelsToPoints(0, True) &#39;设置上边距为0
+        .BottomPadding = PixelsToPoints(0, True) &#39;设置下边距为0
+        .LeftPadding = PixelsToPoints(0, True)  &#39;设置左边距为0
+        .RightPadding = PixelsToPoints(0, True) &#39;设置右边距为0
+        .Spacing = PixelsToPoints(0, True) &#39;允许单元格间距为0
+        .AllowPageBreaks = True               &#39;允许断页
+        &#39;.AllowAutoFit = True                 &#39;允许自动调整尺寸
         
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/%E5%B7%A5%E4%BD%9C/">工作</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E5%B7%A5%E4%BD%9C/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97/">工作日志</a>
-            </div>
-            <div class="date"><time datetime="2024-04-10T08:47:33.000Z" itemprop="datePublished">2024-04-10</time></div>
+        &#39;设置边框
+        .Borders(wdBorderLeft).LineStyle = wdLineStyleNone
+        .Borders(wdBorderRight).LineStyle = wdLineStyleNone
+        .Borders(wdBorderTop).LineStyle = wdLineStyleNone
+        .Borders(wdBorderBottom).LineStyle = wdLineStyleNone
+        .Borders(wdBorderTop).LineStyle = wdLineStyleThinThickMedGap
+        .Borders(wdBorderTop).LineWidth = wdLineWidth2pt
+        .Borders(wdBorderBottom).LineStyle = wdLineStyleThickThinMedGap
+        .Borders(wdBorderBottom).LineWidth = wdLineWidth225pt
+        
+        With .Rows
+            .WrapAroundText = False &#39;取消文字环绕
+            .Alignment = wdAlignRowCenter &#39;表水平居中  wdAlignRowLeft &#39;左对齐
+            .AllowBreakAcrossPages = False &#39;不允许行断页
+            .HeightRule = wdRowHeightExactly &#39;行高设为最小值   wdRowHeightAuto &#39;行高设为自动
+            .Height = CentimetersToPoints(0) &#39;上面缩进量为0
+            .LeftIndent = CentimetersToPoints(0) &#39;左面缩进量为0
+        End With
+        
+        With .Range
+            With .Font &#39;字体格式
+                .name = &quot;宋体&quot;
+                .name = &quot;Times New Roman&quot;
+                .Color = wdColorAutomatic &#39;自动字体颜色
+                .Size = 12
+                .Kerning = 0
+                .DisableCharacterSpaceGrid = True
+            End With
+            
+            With .ParagraphFormat &#39;段落格式
+                .CharacterUnitFirstLineIndent = 0 &#39;取消首行缩进
+                .FirstLineIndent = CentimetersToPoints(0) &#39;取消首行缩进
+                .LineSpacingRule = wdLineSpaceSingle &#39;单倍行距  wdLineSpaceExactly &#39;行距固定值
+                &#39;.LineSpacing = 20 &#39;设置行间距为20磅，配合行距固定值
+                .Alignment = wdAlignParagraphCenter &#39;单元格水平居中
+                .AutoAdjustRightIndent = False
+                .DisableLineHeightGrid = True
+            End With
+            
+            .Cells.VerticalAlignment = wdCellAlignVerticalCenter  &#39;单元格垂直居中
+            
+        End With
+        
+        &#39;设置首行格式
+        .Cell(1, 1).Select &#39; 选中第一个单元格
+        With Selection
+            .SelectRow &#39;选中当前行
+            Selection.Rows.HeadingFormat = wdToggle &#39;自动标题行重复
+            .Range.Font.Bold = False &#39;表头加粗黑体
+            .Shading.ForegroundPatternColor = wdColorAutomatic &#39;首行自动颜色
+            &#39;.Shading.BackgroundPatternColor = -603923969 &#39;首行底纹填充
+        End With
+        
+        &#39;自动调整表格
+        .Columns.PreferredWidthType = wdPreferredWidthAuto
+        .AutoFitBehavior (wdAutoFitContent) &#39;根据内容调整表格
+        .AutoFitBehavior (wdAutoFitWindow) &#39;根据窗口调整表格
+        
+    End With
+    
+    If i = 1 Then Exit For
+Next
+Err.Clear: On Error GoTo 0             &#39;恢复错误捕捉
+Application.DisplayAlerts = True       &#39;开启提示
+Application.ScreenUpdating = True      &#39;开启屏幕刷新
+End Sub
+</code></pre>
+<p>————————————————</p>
+
         </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2024/04/10/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%972024-4-10/">工作日志2024.4.10</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            日志
-2024年4月10日；星期三 ；多云
+        <footer class="article-footer">
+            
 
 
 
+    <a data-url="https://icbcman.github.io/2025/03/05/vba%E6%8E%92%E7%89%88%E5%8F%82%E6%95%B0%E6%A1%88%E4%BE%8B/" data-id="cm7vsuxde0001ewcyh5181g1b" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
 
-序号
-事项
-事项记录
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
 
+            if ($('#' + id).length) {
+                box = $('#' + id);
 
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
 
-1
-今日完成工作
-预测存款182.11亿元，出款1.45亿元；
+              box = $(html);
 
+              $('body').append(box);
+            }
 
+            $('.article-share-box.on').hide();
 
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
 
-机构部调研准备；贷款项目汇总；
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
 
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
 
-
-
-向一把手汇报部门人力安排；
-
-
-
-
-客户建设发文、配置；不能补息的文件
-
-
-2
-未完成工作
-1+n考核；报销
-
-
-
-
-非四重策略会
-
-
-3
-遇到的问题
-无
-
-
-4
-协调和解决办法
-无
-
-
-5
-明日工作计划
-接
-        </p>
+        </footer>
     </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "zhangxiang"
+        },
+        
+        "image": "https://icbcman.github.io",
+        "keywords": "",
+        "genre": "",
+        "datePublished": "2025-03-05",
+        "dateCreated": "2025-03-05",
+        "dateModified": "2025-03-05",
+        "url": "https://icbcman.github.io/2025/03/05/vba排版参数案例/",
+        "description": "一、修改标题样式（1、2、3…级标题）
+    以1级标题为例，首先找到类型为“标题 1”的样式段落，再修改其具体样式，如加粗、下划线、倾斜、行距、段前段后等。实现代码如下：
+
+123456789101112131415161718Sub FormatHeading2()   &#x27;修改1级标题    Dim p As Paragraph    For Each p In ActiveDoc",
+        "wordCount": 1792
+    }
+</script>
+
 </article>
-    
 
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2024/04/09/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%972024-4-9/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/../pic/29171438fpzf.jpg)" alt="工作日志2024.4.9" class="thumbnail-image"></span>
-    
+    <section id="comments">
     
         
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://icbcman.github.io/2024/04/09/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%972024-4-9/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/%E5%B7%A5%E4%BD%9C/">工作</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E5%B7%A5%E4%BD%9C/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97/">工作日志</a>
-            </div>
-            <div class="date"><time datetime="2024-04-09T06:55:45.000Z" itemprop="datePublished">2024-04-09</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2024/04/09/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%972024-4-9/">工作日志2024.4.9</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            日志
-2024年4月9日；星期二 ；晴
-
-
-
-
-序号
-事项
-事项记录
-
-
-
-1
-今日完成工作
-预测存款182.59亿元，出款2.4亿元；
-
-
-
-
-营业部、开发区、沛县贷款调度会；
-
-
-
-
-党委会321营销活动-没通过
-
-
-2
-未完成工作
-1+n考核；客户建设发文；报销；机构部调研；
-
-
-
-
-贷款项目汇总；非四重策略会
-
-
-3
-遇到的问题
-无
-
-
-4
-协调和解决办法
-无
-
-
-5
-明日工作计划
-向一把
-        </p>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2024/04/08/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%972024-4-8/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/../pic/5.png)" alt="工作日志2024.4.8" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://icbcman.github.io/2024/04/08/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%972024-4-8/">0</span>
-    
-</span>
 
 
     
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/%E5%B7%A5%E4%BD%9C/">工作</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E5%B7%A5%E4%BD%9C/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97/">工作日志</a>
-            </div>
-            <div class="date"><time datetime="2024-04-08T09:22:36.000Z" itemprop="datePublished">2024-04-08</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2024/04/08/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%972024-4-8/">工作日志2024.4.8</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            日志
-2024年4月8日；星期一 ；晴
-
-
-
-
-序号
-事项
-事项记录
-
-
-
-1
-今日完成工作
-存款184.73亿元；拜访人行庄行长；
-
-
-
-
-铜山、鼓楼贷款调度会；普惠沟通
-
-
-2
-未完成工作
-1+n考核；客户建设发文；报销
-
-
-3
-遇到的问题
-无
-
-
-4
-协调和解决办法
-无
-
-
-5
-明日工作计划
-向一把手汇报人力安排
-
-
-6
-今日工作感悟
-坚持、等待
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2024/04/06/%E5%B7%A5%E4%BD%9C%E7%9A%84%E5%9F%8E%E5%B8%822024-4-6/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/../pic/%E5%BE%90%E5%B7%9E%E4%BA%91%E9%BE%99%E6%B9%96.png)" alt="被派去工作的城市" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://icbcman.github.io/2024/04/06/%E5%B7%A5%E4%BD%9C%E7%9A%84%E5%9F%8E%E5%B8%822024-4-6/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/%E6%96%87%E7%AB%A0/">文章</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E6%96%87%E7%AB%A0/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a>
-            </div>
-            <div class="date"><time datetime="2024-04-06T09:22:36.000Z" itemprop="datePublished">2024-04-06</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2024/04/06/%E5%B7%A5%E4%BD%9C%E7%9A%84%E5%9F%8E%E5%B8%822024-4-6/">被派去工作的城市</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            我住的楼盘!
-1金色
-
-
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2024/04/05/%E6%96%B0%E7%9A%84%E4%B8%80%E5%A4%A9%EF%BC%8C%E9%98%B3%E5%85%89%E6%98%8E%E5%AA%9A/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/../pic/img16438266751.jpg)" alt="新的一天，阳光明媚" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://icbcman.github.io/2024/04/05/%E6%96%B0%E7%9A%84%E4%B8%80%E5%A4%A9%EF%BC%8C%E9%98%B3%E5%85%89%E6%98%8E%E5%AA%9A/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/%E6%96%87%E7%AB%A0/">文章</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E6%96%87%E7%AB%A0/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a>
-            </div>
-            <div class="date"><time datetime="2024-04-05T02:29:10.000Z" itemprop="datePublished">2024-04-05</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2024/04/05/%E6%96%B0%E7%9A%84%E4%B8%80%E5%A4%A9%EF%BC%8C%E9%98%B3%E5%85%89%E6%98%8E%E5%AA%9A/">新的一天，阳光明媚</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            熬夜，是因为没有勇气结束这一天；赖床，是因为没有勇气开始这一天。早安一切重新开始！
-
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2024/04/04/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E5%AD%97/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/../pic/mmnv-1712199046260-2.png)" alt="第一篇文字" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://icbcman.github.io/2024/04/04/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E5%AD%97/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/%E6%96%87%E7%AB%A0/">文章</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E6%96%87%E7%AB%A0/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a>
-            </div>
-            <div class="date"><time datetime="2024-04-04T02:47:07.000Z" itemprop="datePublished">2024-04-04</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2024/04/04/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E5%AD%97/">第一篇文字</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            不乱于心，不困于情。不畏将来，不念过往。如此，安好。
-
-
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-
-    </div></section>
+    </section>
 
 
 
@@ -677,6 +500,29 @@
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2025/03/05/vba%E6%8E%92%E7%89%88%E5%8F%82%E6%95%B0%E6%A1%88%E4%BE%8B20250305/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            Word VBA排版参数案例
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2025/02/25/FDI%E7%AE%80%E4%BB%8B/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">FDI简介</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -888,11 +734,13 @@
     var disqus_shortname = 'zhangxiang';
     
     
+    var disqus_url = 'https://icbcman.github.io/2025/03/05/vba%E6%8E%92%E7%89%88%E5%8F%82%E6%95%B0%E6%A1%88%E4%BE%8B/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
